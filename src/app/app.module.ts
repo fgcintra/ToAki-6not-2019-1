@@ -9,12 +9,14 @@ import { environment } from '../environments/environment';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
+import {GeolocationComponent} from './geolocation/geolocation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EventsComponent,
+    GeolocationComponent,
   ],
   imports: [
     BrowserModule,
