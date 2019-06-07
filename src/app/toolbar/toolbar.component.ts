@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  @Output() emitter = new EventEmitter<boolean>();
+  
   titulo = 'Fatec ToAki';
-
+  status = false;
   constructor() { }
 
+  mudar(){
+    this.status = !this.status;
+    this.emitter.emit(this.status);
+  }
   ngOnInit() {
   }
 

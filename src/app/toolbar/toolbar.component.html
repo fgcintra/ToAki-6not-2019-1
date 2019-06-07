@@ -1,7 +1,10 @@
 <mat-toolbar color="primary">
-  <span><burger-menu></burger-menu></span>
+
+  <burger-menu (click)="mudar()" ></burger-menu>
 
   <div class="titulo">
     <span>{{titulo}}</span>
   </div>
+
 </mat-toolbar>
+

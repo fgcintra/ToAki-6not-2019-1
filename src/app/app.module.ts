@@ -9,13 +9,15 @@ import { environment } from '../environments/environment';
 import { MaterialModule } from './material/material.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { BurgerMenuComponent } from './menu/menu.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    BurgerMenuComponent
+    BurgerMenuComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

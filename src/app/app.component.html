@@ -1,1 +1,9 @@
-<app-toolbar></app-toolbar>
+<app-toolbar (emitter)="status($event)"></app-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav mode="push" [(opened)]="ativo">Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main
+        <button (click)="ativo=!ativo">Toggle Opened</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -13,18 +13,18 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['menu.component.scss']
 })
 export class BurgerMenuComponent implements OnInit {
-  @Input() init: boolean;
-  @Output() opened = new EventEmitter<any>();
+  @Input() status: boolean;
+  @Output() alterar = new EventEmitter<any>();
 
   active = false;
 
   ngOnInit() {
-    this.active = this.init || false;
+    this.active = false || this.status;
   }
 
   onBurgerClicked() {
     this.active = !this.active;
-    this.opened.emit();
+    this.alterar.emit(this.active);
   }
 }
 
