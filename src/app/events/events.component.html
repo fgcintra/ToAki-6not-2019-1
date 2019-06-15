@@ -1,3 +1,31 @@
-<p>
-  events works!
-</p>
+<h3>Lista de Eventos</h3>
+
+<mat-accordion>
+  <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)" hideToggle *ngFor="let evento of eventosLista; let i = index">
+
+    <mat-expansion-panel-header>
+      <mat-panel-title style="font-weight: bold">{{ evento.nom_evento }}</mat-panel-title>
+      <mat-panel-description style="font-size: 12px">De 88/88 a 99/99 de 2222</mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card *ngFor="let oficina of evento.oficinas" class="workshop-card">
+      <div class="workshop-card__workshop-name">{{ oficina.nom_oficina }}</div>
+      <div class="workshop-card__workshop-owner"><label>Palestrante: </label>{{oficina.nom_instrutor}}</div>
+      <div class="workshop-card__workshop-place"><label>Sala: </label>{{oficina.nom_localOficina}}</div>
+      <div class="workshop-card__workshop-dates">
+        <div><label>Data: </label>{{ oficina.dat_inicioOficina | date: 'dd/MM/yyyy' }}</div>
+        <div><label>Início: </label>{{ oficina.dat_inicioOficina | date: 'HH:mm' }}</div>
+        <div><label>Fim: </label>{{ oficina.dat_fimOficina | date: 'HH:mm' }}</div>
+      </div>
+
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="retornaOficina(evento.cod_evento, oficina.cod_oficina)">Participar dessa oficina</button>
+      </mat-card-actions>
+
+    </mat-card>
+
+    <mat-action-row>
+      <button mat-button color="primary" (click)="nextStep()">Próximo evento</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
