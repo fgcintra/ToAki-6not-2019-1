@@ -10,6 +10,8 @@ import { MaterialModule } from './material/material.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { BurgerMenuComponent } from './menu/menu.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { GeolocalizacaoComponent } from './geolocalizacao/geolocalizacao.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     AppComponent,
     ToolbarComponent,
     BurgerMenuComponent,
-    SidenavComponent
+    SidenavComponent,
+    GeolocalizacaoComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

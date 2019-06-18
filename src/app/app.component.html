@@ -1,9 +1,24 @@
 <app-toolbar (emitter)="status($event)"></app-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav mode="push" [(opened)]="ativo">Sidenav</mat-sidenav>
-    <mat-sidenav-content>Main
-        <button (click)="ativo=!ativo">Toggle Opened</button>
+    <mat-sidenav mode="push" [(opened)]="ativo"> 
+        <mat-nav-list>
+            <a [routerLink]="['']">
+                <mat-list-item>Início</mat-list-item>
+            </a>
+            <a [routerLink]="['geolocalizacao']">
+                <mat-list-item>Verificar Localização</mat-list-item>
+            </a>
+            <a [routerLink]="['leitor-qr-code']">
+                <mat-list-item>Validar QRCode</mat-list-item>
+            </a>            
+            <a [routerLink]="">
+                <mat-list-item>Sair</mat-list-item>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
