@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import EventoService from '../app/services/evento.service'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToAki';
+  constructor(
+    private eventoService : EventoService 
+  ) { }
+
+  ngOnInit(){
+
+  }
 }
