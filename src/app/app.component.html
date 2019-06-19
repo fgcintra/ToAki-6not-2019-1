@@ -6,16 +6,23 @@
             <a [routerLink]="['']">
                 <mat-list-item>Início</mat-list-item>
             </a>
+            <a [routerLink]="['oficinas']">
+                <mat-list-item>Oficinas</mat-list-item>
+            </a>
             <a [routerLink]="['geolocalizacao']">
                 <mat-list-item>Verificar Localização</mat-list-item>
             </a>
-            <a [routerLink]="['leitor-qr-code']">
+            <a [routerLink]="['qrcode']">
                 <mat-list-item>Validar QRCode</mat-list-item>
-            </a>            
+            </a>
+            <a [routerLink]="['perfil']">
+                <mat-list-item>Perfil</mat-list-item>
+            </a>
             <a [routerLink]="">
                 <mat-list-item>Sair</mat-list-item>
-            </a>
+            </a>       
         </mat-nav-list>
+        
     </mat-sidenav>
     <mat-sidenav-content>
         <router-outlet></router-outlet>
