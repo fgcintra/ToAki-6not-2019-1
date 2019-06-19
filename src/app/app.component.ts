@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToAki';
+  ativo = false;
+
+  status(valor){
+    console.log(valor);
+    this.ativo = valor;
+  }
+
 }
