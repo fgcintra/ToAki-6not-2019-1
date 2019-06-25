@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EventoService} from '../services/evento.service';
+import { LeitorQrCodeService } from '../services/leitor-qr-code.service';
+
 
 @Component({
   selector: 'app-events',
@@ -8,12 +10,13 @@ import {EventoService} from '../services/evento.service';
 })
 export class EventsComponent implements OnInit {
 
-  constructor(private eventosService: EventoService) {
+  constructor(private eventosService: EventoService, private cameraService  : LeitorQrCodeService) {
   }
 
   eventosLista: Array<Object> = [{}];
   oficinaSelecionada: Object = {};
   step: number = 0;
+  cod_oficina : number = 0;
 
   setStep(index: number) {
     this.step = index;
@@ -34,8 +37,7 @@ export class EventsComponent implements OnInit {
   retornaOficina(eId: Number, oId: Number) {
     this.oficinaSelecionada = this.eventosService.retornaOficina(eId, oId);
 
-    console.log(this.oficinaSelecionada);
-
+    this.cameraService.verificaDistancia(this.oficinaSelecionada);
   }
 
 }

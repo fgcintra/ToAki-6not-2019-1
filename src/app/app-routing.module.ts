@@ -3,6 +3,8 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {EventsComponent} from './events/events.component';
 import {GeolocationComponent} from './geolocation/geolocation.component';
+import { LeitorQrCodeComponent } from './leitor-qr-code/leitor-qr-code.component';
+
 
 const routes: Routes = [
   {
@@ -16,6 +18,10 @@ const routes: Routes = [
   {
     path: 'geolocation',
     component: GeolocationComponent
+  },
+  {
+    path: 'teste',
+    component: LeitorQrCodeComponent
   }
 ];
 

@@ -10,6 +10,8 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
 import {GeolocationComponent} from './geolocation/geolocation.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { LeitorQrCodeComponent } from './leitor-qr-code/leitor-qr-code.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import {GeolocationComponent} from './geolocation/geolocation.component';
     HomeComponent,
     EventsComponent,
     GeolocationComponent,
+    LeitorQrCodeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ZXingScannerModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
