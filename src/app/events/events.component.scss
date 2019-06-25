@@ -1,0 +1,36 @@
+.workshop-card {
+  margin: 15px 0;
+
+  &__workshop-name {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 12px;
+  }
+
+  &__workshop-owner, &__workshop-place {
+    > label {
+      color: #ccc;
+      font-size: 10px;
+    }
+
+    color: #444;
+    font-size: 11px;
+
+  }
+
+  &__workshop-dates {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      > label {
+        color: #ccc;
+        font-size: 10px;
+      }
+
+      color: #444;
+      font-size: 11px;
+    }
+  }
+}
